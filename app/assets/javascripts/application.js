@@ -10,7 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require activestorage
 //= require turbolinks
+//= require theme/jquery.min
+//= require theme/bootstrap.min
+//= require theme/jquery.flexslider-min
+//= require theme/jquery.magnific-popup
+//= require theme/theia-sticky-sidebar
+//= require theme/main
 //= require_tree .

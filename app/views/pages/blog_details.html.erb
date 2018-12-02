@@ -4,7 +4,7 @@
       <div class="col-sm-8 col-md-9 tr-sticky">
         <div class="theiaStickySidebar">
           <div class="breadcrumbs">
-            <a href="#">Home</a>
+            <%= link_to 'Home', home_path %>
             <span>/&nbsp;</span>Blog Details
           </div>										
           <div class="blog-post">
@@ -25,7 +25,7 @@
 
               <!-- Post Thumbnail -->
               <div class="blog-image">
-                <img src="images/super-natural.jpg" alt="Image">	
+                <%= image_tag 'super-natural.jpg', alt: 'Image' %>
               </div>
               <div class="blog-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -74,7 +74,9 @@
               <div class="prev-post clearfix">
                 <a href="#" rel="prev">Previous Article</a>
                 <span>
-                  <a href="#"><img src="images/theater-hannover-43x39.jpg" alt="Image" class="img-responsive"></a>
+                  <a href="#">
+                    <%= image_tag 'theater-hannover-43x39.jpg', alt: 'Image', class: 'img-responsive' %>
+                  </a>
                 </span> 
                 <label><a href="#">Freies Theater Hannover</a></label>
               </div>
@@ -107,7 +109,9 @@
 
                     <!-- Post Thumbnail -->
                     <div class="blog-image">
-                      <a href="#"><img src="images/new-swedish-263x238.jpg" alt="Image" class="img-responsive"></a>	
+                      <a href="#">
+                        <%= image_tag 'new-swedish-263x238.jpg', alt: 'Image', class: 'img-responsive' %>
+                      </a>	
                     </div>
 
                     </div>
@@ -130,7 +134,9 @@
                           <i class="fa fa-external-link fa-3x"></i>
                         </a>
                         <span class="blog-format-audio">Audio</span>
-                        <a href="#"><img src="images/featuring-color-green-263x238.jpg" alt="Image" class="img-responsive"></a>
+                        <a href="#">
+                          <%= image_tag 'featuring-color-green-263x238.jpg', alt: 'Image', class: 'img-responsive' %>
+                        </a>
                       </div>		
                     </div>
                     <div class="blog-list-desc">
@@ -151,7 +157,9 @@
                         <i class="fa fa-external-link fa-3x"></i>
                       </a>
                       <div class="blog-image">
-                        <a href="#"><img src="images/theater-hannover-263x238.jpg" alt="Image" class="img-responsive"></a>
+                        <a href="#">
+                          <%= image_tag 'theater-hannover-263x238.jpg', alt: 'Image', class: 'img-responsive' %>
+                        </a>
                       </div>
                     </div>
                     <div class="blog-list-desc">
@@ -207,7 +215,10 @@
           <div class="widget widget_text">
             <h5>Advertise Here</h5>			
             <div class="textwidget">
-              <a href="#"><img src="images/ads_one.jpg" alt="Sidebar Banner Advertisements" class="img-responsive"></a>
+              <a href="#">
+                <%= image_tag 'ads_one.jpg', alt: 'Sidebar Banner Advertisements', class: 'img-responsive' %>
+              </a>
+              
             </div>
           </div>
 
@@ -217,7 +228,9 @@
               <li>
                 <div class="clearfix">
                   <div class="pp-image">
-                    <a href="#"><img src="images/new-illustrations-late-2015-43x39.jpg" alt="Image" class="img-responsive"></a>
+                    <a href="#">
+                      <%= image_tag 'new-illustrations-late-2015-43x39.jpg', alt: 'Image', class: 'img-responsive' %>
+                    </a>
                   </div>
                   <div class="pp-desc">
                     <span class="pp-categories"><a href="#">Typography</a></span>
@@ -229,7 +242,9 @@
               <li>
                 <div class="clearfix">
                   <div class="pp-image">
-                    <a href="#"><img src="images/theater-hannover-43x39.jpg" alt="theater-hannover" class="img-responsive"></a>								
+                    <a href="#">
+                      <%= image_tag 'theater-hannover-43x39.jpg', alt: 'theater-hannover', class: 'img-responsive' %>
+                    </a>								
                   </div>
                   <div class="pp-desc">
                     <span class="pp-categories"><a href="#">Character Design</a> <a href="#">Drawing</a></span>
@@ -241,7 +256,9 @@
               <li>
                 <div class="clearfix">
                 <div class="pp-image">
-                  <a href="#"><img src="images/skills-radar-43x39.jpg" alt="Image" class="img-responsive"></a>
+                  <a href="#">
+                    <%= image_tag 'skills-radar-43x39.jpg', alt: 'Image', class: 'img-responsive' %>
+                  </a>
                 </div>
                 <div class="pp-desc">
                   <span class="pp-categories"><a href="#">Graphic Design</a></span>
@@ -253,7 +270,9 @@
               <li>
                 <div class="clearfix">
                   <div class="pp-image">
-                    <a href="#"><img src="images/color-relationships-43x39.jpg" alt="Image" class="img-responsive"></a>			
+                    <a href="#">
+                      <%= image_tag 'color-relationships-43x39.jpg', alt: 'Image', class: 'img-responsive' %>
+                    </a>			
                   </div>
                   <div class="pp-desc">
                     <span class="pp-categories"><a href="#">Illustration</a></span>

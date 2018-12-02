@@ -4,7 +4,7 @@
       <div class="col-sm-8 col-md-9 tr-sticky">
         <div class="theiaStickySidebar">
           <div class="breadcrumbs">
-            <a href="#">Home</a>
+            <%= link_to 'Home', home_path %>
             <span>/&nbsp;</span>Contact
           </div>	
 
@@ -73,7 +73,9 @@
           <div class="widget widget_text">
             <h5>Advertise Here</h5>			
             <div class="textwidget">
-              <a href="#"><img src="images/ads_one.jpg" alt="Sidebar Banner Advertisements" class="img-responsive"></a>
+              <a href="#">
+                <%= image_tag 'ads_one.jpg', alt: 'Sidebar Banner Advertisements', class: 'img-responsive' %>
+              </a>
             </div>
           </div>
 

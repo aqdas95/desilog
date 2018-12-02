@@ -5,25 +5,33 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,500,600,700,800,900" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<%= favicon_link_tag '/images/ico/apple-touch-icon-144.png', rel: 'apple-touch-icon', size: '144x144' %>
+		<%= favicon_link_tag '/images/ico/apple-touch-icon-114.png', rel: 'apple-touch-icon', size: '114x114' %>
+		<%= favicon_link_tag '/images/ico/apple-touch-icon-72.png', rel: 'apple-touch-icon', size: '72x72' %>
+		<%= favicon_link_tag '/images/ico/apple-touch-icon-57.png', rel: 'apple-touch-icon', size: '57x57' %>
+		
   </head>
 
   <body class="tr-homepage">
 		<div class="top-banner">						
-			<a href="#"><img src="images/top-banner.png" alt="Top Banner Advertisements"></a>	
+			<a href="#">
+				<%= image_tag 'top-banner.png', alt: 'op Banner Advertisements' %>
+			</a>	
 		</div>
 
 		<div class="container">
 			<div class="logo-search header-two clearfix">										
 				<div class="logo">
 					<h1>
-						<a href="index.html"><img src="http://themecss.com/wp/Desilog/wp-content/themes/desilog/img/logo.png" alt="Desilog" title="Desilog">
-						</a>
+						<%= link_to home_path do %>
+							<%= image_tag 'logo.png', alt: 'Desilog', title: 'Desilog' %>
+						<% end %>
 					</h1>
 				</div>
 
@@ -31,24 +39,24 @@
 					<div class="flex-viewport">
 						<ul class="slides">
 							<li class="clone">
-								<img src="images/super-natural-43x39.jpg" alt="science-kombat">
+								<%= image_tag 'super-natural-43x39.jpg', alt: 'science-kombat' %>
 								<div class="ticker-action">
 									<span>Feb 18, 2017</span>
-									<h4><a href="blog-details.html">Science Kombat</a></h4>	
+									<h4><%= link_to 'Science Kombat', blog_details_path %></h4>	
 								</div>
 							</li>
 							<li class="clone">
-								<img src="images/theater-hannover-43x39.jpg" alt="science-kombat">
+								<%= image_tag 'super-natural-43x39.jpg', alt: 'science-kombat' %>
 								<div class="ticker-action">
 									<span>Feb 15, 2017</span>
-									<h4><a href="blog-details.html">Science Kombat</a></h4>	
+									<h4><%= link_to 'Science Kombat', blog_details_path %></h4>	
 								</div>
 							</li>
 							<li class="clone">
-								<img src="images/skills-radar-43x39.jpg" alt="science-kombat">
+								<%= image_tag 'super-natural-43x39.jpg', alt: 'science-kombat' %>
 								<div class="ticker-action">
 									<span>Feb 21, 2017</span>
-									<h4><a href="blog-details.html">Science Kombat</a></h4>	
+									<h4><%= link_to 'Science Kombat', blog_details_path %></h4>	
 								</div>
 							</li>
 						</ul>
@@ -81,17 +89,17 @@
 						<div class="navbar-collapse collapse" id="navbar-collapse">
 							<div id="dropdown" class="theme-menu nav navbar-nav">
 								<ul>
-									<li class="active"><a href="#">Home</a></li>
+									<li class="active"><%= link_to 'Home', home_path %></li>
 									<li class="dropdown"><a href="#">Pages</a>
 										<ul class="sub-menu">
-											<li><a href="category.html">Category</a></li>
-											<li><a href="blog-details.html">Blog Details</a></li>
-											<li><a href="404.html">404 Pages</a></li>
+											<li><%= link_to 'Contact', contact_path %></li>
+											<li><%= link_to 'Blog Details', blog_details_path %></li>
+											<li><%= link_to '404 Pages', error404_path %></li>
 										</ul>
 									</li>
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><%= link_to 'Blog', blog_path %></li>
+									<li><%= link_to 'About', about_path %></li>
+									<li><%= link_to 'Contact', contact_path %></li>
 								</ul>
 							</div>								
 						</div>
@@ -101,10 +109,10 @@
 						<div class="login-signup">
 							<ul class="clearfix">
 								<li>
-									<a href="login.html">Login</a>
+									<%= link_to 'Login', login_path %>
 								</li>									
 								<li>
-									<a href="signup.html">Signup</a>
+									<%= link_to 'Signup', signup_path %>
 								</li>
 							</ul>
 						</div>
@@ -131,7 +139,9 @@
 							<div class="">
 								<div class="widget widget_text">			
 									<div class="textwidget">
-										<a href="index.html"><img src="images/footer-logo.png" alt="Desilog"></a>
+										<%= link_to home_path do %>
+											<%= image_tag 'footer-logo.png', alt: 'Desilog' %>
+										<% end %>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 									</div>
 								</div>				
@@ -170,10 +180,10 @@
 					<label class="copyright">&copy;&nbsp;2017&nbsp;<a href="#">Desilog</a>&nbsp;‐&nbsp;All Rights Reserved</label>
 					<div class="footer-menu">
 						<ul id="menu-footer-menu" class="clearfix">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><%= link_to 'Home', home_path %></li>
+							<li><%= link_to 'About', about_path %></li>
+							<li><%= link_to 'Blog', blog_path %></li>
+							<li><%= link_to 'Contact', contact_path %></li>
 						</ul>
 					</div>		
 				</div>
@@ -181,11 +191,6 @@
 		</footer><!-- footer -->	
 		
 		<!-- JS -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.flexslider-min.js"></script>
-		<script src="js/jquery.magnific-popup.js"></script>
-		<script src="js/theia-sticky-sidebar.js"></script>
-		<script src="js/main.js"></script>
+		<%= javascript_include_tag 'application' %>
 	</body>
 </html>

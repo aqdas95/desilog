@@ -649,7 +649,7 @@ header.sticky-header-animate {
     top: 50%;
     right: -5px;
     margin-top: -9px;
-    background-image: url(../images/search.png);
+    background-image: asset_path('search.png');
     background-repeat: no-repeat;
     text-indent: -9999999px;
     background-color: transparent;
